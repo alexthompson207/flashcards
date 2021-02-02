@@ -22,32 +22,30 @@ describe('Deck', () => {
 
     deck1 = new Deck([card1, card2, card3]);
     deck2 = new Deck([card4, card5]);
-
-    const deck = new Deck();
   });
 
-  it.skip('should be a function', () => {
+  it('should be a function', () => {
     expect(Deck).to.be.a('function');
   });
 
-  it.skip('should be an instance of Deck', () => {
+  it('should be an instance of Deck', () => {
     expect(deck1).to.be.an.instanceof(Deck);
   });
 
-  it.skip('should be able to hold cards', () => {
+  it('should be able to hold cards', () => {
     expect(deck1.cards).to.deep.equal([card1, card2, card3]);
   });
 
-  it.skip('should be able to hold different cards', () => {
+  it('should be able to hold different cards', () => {
     expect(deck2.cards).to.deep.equal([card4, card5]);
   });
 
-  it.skip('should be able to count its cards', () => {
-    expect(deck1.coundCards()).to.equal(3);
+  it('should be able to count its cards', () => {
+    expect(deck1.countCards()).to.equal(3);
   });
 
-  it.skip('should be able to count different cards', () => {
-    expect(deck2.coundCards()).to.equal(2);
+  it('should be able to count different cards', () => {
+    expect(deck2.countCards()).to.equal(2);
   });
 
 })
