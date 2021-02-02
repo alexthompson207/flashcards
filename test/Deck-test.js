@@ -21,8 +21,22 @@ describe('Deck', () => {
     card5 = new Card(5, 'Who is the creator of Star Wars?', ['George Lucas', 'Harrison Ford', 'J. K. Rowling'], 'George Lucas');
     deck1 = new Deck([card1, card2, card3]);
     deck2 = new Deck([card4, card5]);
-
-
   })
+
+  it('should be a function', () => {
+    expect(Deck).to.be.a('function');
+  });
+
+  it('should be an instance of Deck', () => {
+    expect(deck1).to.be.an.instanceof('Deck');
+  });
+
+  it('should be able to hold cards', () => {
+    expect(deck1.cards).to.deep.equal([card1, card2, card3]);
+  });
+
+  it('should be able to hold different cards', () => {
+    expect(deck2.cards).to.deep.equal([card4, card5]);
+  });
 
 })
