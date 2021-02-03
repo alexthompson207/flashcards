@@ -1,6 +1,5 @@
 const chai = require('chai');
 const expect = chai.expect;
-
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
@@ -85,7 +84,6 @@ describe('Round', () => {
   });
 
   it('should be able to evaluate if a guess is correct', () => {
-    // round1.takeTurn('sixty million');
     expect(round1.takeTurn('sixty million')).to.equal('correct!');
     expect(round1.turns).to.equal(1);
   });
@@ -124,14 +122,4 @@ describe('Round', () => {
 
     expect(round2.calculatePercentCorrect()).to.deep.equal(50);
   });
-
-  it('should be able to end the round, and log percentage correct', () => {
-    round2.takeTurn('Hutt');
-    round2.takeTurn('Harrison Ford');
-
-    expect(round2.endRound()).to.deep.equal('** Round over! ** You answered 50% of the questions correctly!');
-  });
-
-
-
-})
+});
