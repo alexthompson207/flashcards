@@ -1,6 +1,5 @@
 const chai = require('chai');
 const expect = chai.expect;
-
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
@@ -85,7 +84,6 @@ describe('Round', () => {
   });
 
   it('should be able to evaluate if a guess is correct', () => {
-    // round1.takeTurn('sixty million');
     expect(round1.takeTurn('sixty million')).to.equal('correct!');
     expect(round1.turns).to.equal(1);
   });
