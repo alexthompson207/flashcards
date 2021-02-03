@@ -61,4 +61,12 @@ describe('Game', () => {
     expect(game.currentRound).to.be.an.instanceof(Round);
   });
 
+  it('should keep track of the current round', () => {
+    const prototypeQuestions = data.prototypeData;
+
+    game.start();
+
+    expect(game.currentRound).to.be.an.instanceof(Round);
+    expect(game.currentRound.deck.cards).to.deep.equal(prototypeQuestions);
+  });
 })
