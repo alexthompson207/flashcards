@@ -124,14 +124,4 @@ describe('Round', () => {
 
     expect(round2.calculatePercentCorrect()).to.deep.equal(50);
   });
-
-  it('should be able to end the round, and log percentage correct', () => {
-    round2.takeTurn('Hutt');
-    round2.takeTurn('Harrison Ford');
-
-    expect(round2.endRound()).to.deep.equal('** Round over! ** You answered 50% of the questions correctly!');
-  });
-
-
-
-})
+});
