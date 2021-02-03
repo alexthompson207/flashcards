@@ -57,4 +57,12 @@ describe('Round', () => {
     expect(round1.incorrectGuesses).to.deep.equal([]);
   });
 
+  it('should be able to return the current card being played', () => {
+    expect(round1.returnCurrentCard()).to.deep.equal(card1);
+  });
+
+  it('should be able to return a different current card being played', () => {
+    expect(round2.returnCurrentCard()).to.deep.equal(card4);
+  });
+
 })
