@@ -65,4 +65,29 @@ describe('Round', () => {
     expect(round2.returnCurrentCard()).to.deep.equal(card4);
   });
 
+  it('should be able to take a turn', () => {
+    round1.takeTurn('sixty million');
+    expect(round1.turns).to.equal(1);
+  });
+
+  it('should be able to take multiple turns', () => {
+    round1.takeTurn('sixty million');
+    round1.takeTurn('Han Solo');
+    round1.takeTurn('Yoda');
+    expect(round1.turns).to.equal(3);
+  });
+
+  it('should remove the current card when a turn is taken', () => {
+    expect(round1.returnCurrentCard()).to.deep.equal(card1);
+    round1.takeTurn('sixty million');
+    expect(round1.turns).to.equal(1);
+    expect(round1.returnCurrentCard()).to.deep.equal(card2);
+
+  });
+
+  //takeTurn
+  //evaluates guesses
+  //gives feedback
+  //stores ids of incorrect guesses
+
 })
