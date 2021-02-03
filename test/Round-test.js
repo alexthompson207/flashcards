@@ -21,7 +21,7 @@ describe('Round', () => {
     card1 = new Card(1, 'C-3P0 is fluent in how many languages?', ['twenty', 'one-hundred', 'sixty million'], 'sixty million');
     card2 = new Card(2, 'Who built C-3P0?', ['Anakin Skywalker', 'Yoda', 'Han Solo'], 'Anakin Skywalker');
     card3 = new Card(3, 'Who killed Han Solo?', ['Kylo Ren', 'Darth Vader', 'Yoda'], 'Kylo Ren');
-    card4 = new Card(4, 'What species is Jabba?', ['Slug', 'Hutt', 'Alien'], 'Slug');
+    card4 = new Card(4, 'What species is Jabba?', ['Slug', 'Hutt', 'Alien'], 'Hutt');
     card5 = new Card(5, 'Who is the creator of Star Wars?', ['George Lucas', 'Harrison Ford', 'J. K. Rowling'], 'George Lucas');
 
     deck1 = new Deck([card1, card2, card3]);
@@ -95,9 +95,43 @@ describe('Round', () => {
     expect(round1.turns).to.equal(1);
   });
 
-  //takeTurn
-  //evaluates guesses
-  //gives feedback
-  //stores ids of incorrect guesses
+  it('should be able to store incorrect guesses', () => {
+    expect(round1.takeTurn('twenty')).to.equal('incorrect!');
+    expect(round1.incorrectGuesses.length).to.deep.equal(1);
+    round1.takeTurn('Yoda');
+    round1.takeTurn('Darth Vader');
+    expect(round1.incorrectGuesses.length).to.deep.equal(3);
+  });
+
+  it('should store incorrect guesses by card id', () => {
+    round1.takeTurn('twenty');
+    round1.takeTurn('Yoda');
+    expect(round1.incorrectGuesses[0]).to.deep.equal(1);
+    expect(round1.incorrectGuesses[1]).to.deep.equal(2);
+  });
+
+  it('should be able to caculate the percentage of correct guesses', () => {
+    round1.takeTurn('twenty');
+    round1.takeTurn('Yoda');
+    round1.takeTurn('Kylo Ren');
+
+    expect(round1.calculatePercentCorrect()).to.deep.equal(33);
+  });
+
+  it('should be able to caculate the percentage of correct guesses of a different round', () => {
+    round2.takeTurn('Hutt');
+    round2.takeTurn('Harrison Ford');
+
+    expect(round2.calculatePercentCorrect()).to.deep.equal(50);
+  });
+
+  it('should be able to end the round, and log percentage correct', () => {
+    round2.takeTurn('Hutt');
+    round2.takeTurn('Harrison Ford');
+
+    expect(round2.endRound()).to.deep.equal('** Round over! ** You answered 50% of the questions correctly!');
+  });
+
+
 
 })
