@@ -1,6 +1,5 @@
 const chai = require('chai');
 const expect = chai.expect;
-
 const Game = require('../src/Game');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
@@ -9,7 +8,6 @@ const data = require('../src/data');
 
 describe('Game', () => {
   let game;
-
 
   beforeEach(() => {
     game = new Game();
@@ -69,4 +67,4 @@ describe('Game', () => {
     expect(game.currentRound).to.be.an.instanceof(Round);
     expect(game.currentRound.deck.cards).to.deep.equal(prototypeQuestions);
   });
-})
+});

@@ -1,6 +1,5 @@
 const chai = require('chai');
 const expect = chai.expect;
-
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
 
@@ -19,7 +18,6 @@ describe('Deck', () => {
     card3 = new Card(3, 'Who killed Han Solo?', ['Kylo Ren', 'Darth Vader', 'Yoda'], 'Kylo Ren');
     card4 = new Card(4, 'What species is Jabba?', ['Slug', 'Hutt', 'Alien'], 'Hutt');
     card5 = new Card(5, 'Who is the creator of Star Wars?', ['George Lucas', 'Harrison Ford', 'J. K. Rowling'], 'George Lucas');
-
     deck1 = new Deck([card1, card2, card3]);
     deck2 = new Deck([card4, card5]);
   });
@@ -47,5 +45,4 @@ describe('Deck', () => {
   it('should be able to count different cards', () => {
     expect(deck2.countCards()).to.equal(2);
   });
-
-})
+});
