@@ -20,6 +20,12 @@ describe('Game', () => {
 
   it('should be a an instance of Game', () => {
     expect(game).to.be.an.instanceof(Game);
-  })
+  });
+
+  it('should create cards for the game', () => {
+    game.createCards();
+    expect(game.cards).to.be.an('array');
+    expect(game.cards.length).to.deep.equal(30);
+  });
 
 })

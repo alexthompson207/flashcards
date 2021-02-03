@@ -3,15 +3,25 @@ const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 
 class Game {
-  constructor() {}
+  constructor() {
+    this.currentRound;
+    this.deck;
+    this.cards = [];
+  }
+
+  start() {
+
+    this.printMessage();
+    this.printQuestion();
+  }
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
-      util.main(round);
+    util.main(round);
   }
 }
 
