@@ -1,79 +1,71 @@
-# FlashCards Starter Kit
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555)](https://www.linkedin.com/in/alex-thompson-309070a2/ )
 
-## Fork This Repo
+[![GitHub](https://img.shields.io/badge/GitHub-black.svg?&style=flat-square&logo=github&logoColor=white)](https://github.com/alexthompson207)
 
-On the top right corner of this page, click the **Fork** button.
+<p align="center">
+  <a href="https://github.com/alexthompson207/flashcards">
+    <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
+  </a>
 
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Node server running on port 3000
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+  <h1 align="left">Flash Cards Project</h1>
 
 
-## Where to Add Your Code
 
-### JavaScript
+## Table of Contents
 
-**Create all of your feature code files in the `src` directory.**
+- [About the Project](#about-the-project)
+- [Functionality](#functionality)
+  - [Giph of Game Play](#game-play)
+  - [Giph of Game End](#game-end)
+- [Set-up Instructions](#set-up-instructions)
+- [Contributors](#contributors)
+  - [Built With](#built-with)
+- [Contact](#contact)
 
-We will be using the `module.exports` and `require` syntax to share code across files.
 
-## How to View Your Code in Action
+## About The Project
 
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
+The Flash Cards Project is a game playable through the Command Line Interface. I was given a starter pack partially constructed with a few files to begin. This game was created using OOP in JavaScript. The specific project goals and objectives can be found in the [Project Brief and Rubric](https://frontend.turing.io/projects/flash-cards.html).
 
-```bash
-node index.js
-```
 
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
+## Functionality
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+#### Game Play
+![gif of a normal game play](#)
 
----
+#### Game End
+![giph of game end](#)
 
-## Test Files Organization
 
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
+## Set-up Instructions
 
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
+1. Fork this [Github repository](https://github.com/alexthompson207/flashcards) and clone it down to your local machine using the `git clone` command in your Terminal.
+2. Move into that directory with `cd flashcards` in your Terminal.
+3. Run `node index.js` in your Terminal to run the game locally in the Terminal.
+4. Select your answers to the questions by typing the number and pressing `return` OR using your `arrow` and `return` keys.
+5. To see the code itself locally, run `<name of text editor> .` in your Terminal.
+6. To test the code, run `npm install` and then `npm test`.
 
-## Running Your Tests
 
-Run your test suite using the command:
+## Contributers
 
-```bash
-npm test
-```
+* [Alex Thompson](https://github.com/alexthompson207) - Game creator
 
-The test results will output to the terminal.
+#### Built With:
 
----
+- [![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)](https://www.javascript.com/) 
 
-## Linting Your Code
 
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
+## Contact
 
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory. 
+[<img src="https://img.shields.io/badge/LinkedIn-alex--thompson-informational?style=for-the-badge&labelColor=black&logo=linkedin&logoColor=0077b5&&color=0077b5"/>][linkedin]
+[<img src="https://img.shields.io/badge/Gmail-ahthomps1@gmail.com-informational?style=for-the-badge&labelColor=black&logoColor=d14836&logo=microsoft&color=d14836"/>][gmail]
+[<img src="https://img.shields.io/badge/Github-AlexThompson207-informational?style=for-the-badge&labelColor=black&logo=github&color=7d88e6"/>][github]
 
----
+
+
+<!-- Personal Definitions  -->
+
+[linkedin]: https://www.linkedin.com/in/alex-thompson-309070a2/
+[Gmail]: mailto:ahthomps1@gmail.com
+[github]: https://github.com/alexthompson207
