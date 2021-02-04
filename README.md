@@ -31,10 +31,10 @@ The Flash Cards Project is a game playable through the Command Line Interface. I
 ## Functionality
 
 #### Game Play
-![gif of a normal game play](#)
+![gif of a normal game play](https://media.giphy.com/media/CAblCTKlPHZ8rqvdrP/giphy.gif)
 
 #### Game End
-![giph of game end](#)
+![giph of game end](https://media.giphy.com/media/PQ1MJ3jxDE40EpfZCp/giphy.gif)
 
 
 ## Set-up Instructions
